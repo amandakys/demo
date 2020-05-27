@@ -1,0 +1,41 @@
+.custom-sticky {
+    position: sticky; 
+    top: 0; 
+    z-index: 1;
+}
+
+.custom-card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: inherit;
+}
+
+.custom-card-img {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.date {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.app {
+    background-color: var(--light);
+}
+
+.custom-position {
+    position: unset;
+}
+
+.press {
+   background: linear-gradient(145deg,#28a745 0%, #20c99f 30%, #20c99f 60%, #f4ebc9 100%);
+   color: white;
+}
+
+.cyan-bg {
+    background: #17a2b8;
+}
+
