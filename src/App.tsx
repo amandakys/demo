@@ -1,17 +1,12 @@
-import React, { useState } from 'react';
-import logo from './logo.svg';
-// import './App.css';
+import React, { useState } from "react";
+
 import "./css/bootstrap-min.css";
 import "./css/truelayer.css";
 import "./css/main.css";
 import "./css/mobile.css";
 
-
-
 import { Navbar } from './components/Navbar';
-import { Content } from './components/Content';
 import { Header, Filter } from './components/Header';
-import { Article } from './components/Article';
 import { ArticleList } from './components/ArticleList';
 import { Footer } from './components/Footer';
 
