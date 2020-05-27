@@ -1,44 +1,30 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Instructions 
 
-## Available Scripts
+To run the app locally run `yarn start` in the command line. 
 
-In the project directory, you can run:
+To view the final project you can also visit the hosted version [here](https://amandakys.github.io/demo/)
 
-### `yarn start`
+## Design Choices
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Primary Goal: A Press page that fits into the TrueLayer website. 
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+I decided to maintain the header section, but use a different coloured gradient. I chose green as I couldn't immediately find a green header on the side and constructed the gradient as per the brandbook. 
 
-### `yarn test`
+I was inspired by the Customers page on the website, specifically the sticky header and allowed uers to filter the content of the page. I decided to use this concept for my Press page. 
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+I wanted users to be able to filter between different types of articles. For this demo, I distinguished between company announcements, and news articles. Visually the distinction is made clear through a different colour base for the card's image tint and title line. I also noted the use of tags in the Customers page for each type of customer and built News and Announcement Tags.   
 
-### `yarn build`
+As cards were used throughout the site, I built a new card with the same rounded corners and box-shadow to represent an 'Article Card'. Key information displayed for each article are: title, summary, source and date. Each card would then direct users to a new page where the full article could be read. 
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Technical Choices 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+I chose to use a React as I was most comfortable writing UIs in this format. In hindsight, this added additional overhead as I needed to port the source HTML file from the TrueLayer website into a React format. For this reason, a lot of the components in the app are just copy-pasted html. I did try to componentise any duplicated html I saw in the source code. As such files for which I wrote the most code are: `Article.tsx`, `ArticleList.tsx` and `Header.tsx`. 
 
-### `yarn eject`
+Initially my main reason for wanting to use React was because I wanted to be able to generate Article cards based on an array of article data rather than manually writing multiple html sections. I may have been able to do this with vanilla javascript but I did not have experience with this. This card generation would make it easy to quickly add more articles, and made implementing article filtering easier. 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Unfortunately, I was not hugely familiar with Bootstrap. However, a lot of these classes were baked into the source HTML, so I did my best to continue using them in the components I wrote. 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+One of the main limitations of my current code is that the header does not revert back to being its original colour when its not being as a sticky header. This is behaviour that it exhibits in the Customers page, but I was unable to replicate in a performant way using Intersection Observers in React. Given more time, I may have been able to work this out, but for now the header is always coloured based on the filter type, which leads to an inconsistent look when the Gradient header is also visible. 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).

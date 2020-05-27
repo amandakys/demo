@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/App.css"
+import "../css/test-truelayer.css"
 import { Filter } from "./Header";
 
 export interface ArticleProps {
@@ -45,8 +45,6 @@ export const Article: React.FC<ArticleProps> = (props) => {
                                         </span>
                                     </div>
                                 </div>
-
-                        
                             </div>
                         </div>
                     </div>

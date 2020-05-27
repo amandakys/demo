@@ -17,7 +17,6 @@ function App() {
       <div id="wrapper">
         <Navbar/>  
         <Header filter={filter} setFilter={(filter: Filter) => setFilter(filter)}/>
-        {/* <Content/> */}
         <ArticleList filter={filter}/>
         <Footer/>
       </div> 
